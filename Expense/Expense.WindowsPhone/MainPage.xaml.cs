@@ -54,6 +54,8 @@ namespace Expense
             }
             else
                 OutputTextBlock.Text = "Doesn't exist: " + expensesFolder.Name + "/" + expensesFileName;
+
+            UpdateMileageUI();
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
@@ -72,8 +74,42 @@ namespace Expense
             // clear the (potentially) filled-in text boxes
             ValueText.Text = "";
             CommentText.Text = "";
+            ClearMileageTexts();
+        }
+
+        private void ClearMileageTexts()
+        {
             FuelText.Text = "";
             OdometerText.Text = "";
+        }
+
+        private void CategoriesCombo_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            if (CategoriesCombo != null)
+                UpdateMileageUI();
+        }
+
+        private void UpdateMileageUI()
+        {
+            var category = (string)((ComboBoxItem)CategoriesCombo.SelectedItem).Content;
+            ClearMileageTextsAndSetVisibility(category == "travel");
+        }
+
+        public void ClearMileageTextsAndSetVisibility(bool visible)
+        {
+            if(!visible)
+                ClearMileageTexts();
+            SetMileageVisibility(visible);
+        }
+
+        public void SetMileageVisibility(bool visible)
+        {
+            double opacity = visible ? 1 : 0;
+
+            FuelText.Opacity = opacity;
+            FuelTextBlock.Opacity = opacity;
+            OdometerText.Opacity = opacity;
+            OdometerTextBlock.Opacity = opacity;
         }
 
         public bool FileExists(IReadOnlyList<StorageFile> storageFileList, string fileName)
