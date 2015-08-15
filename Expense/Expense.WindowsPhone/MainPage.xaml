@@ -11,13 +11,6 @@
     <Grid>
         <TextBox x:Name="ValueText" HorizontalAlignment="Left" Margin="20,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="80" Width="144" FontSize="36"
                  InputScope="CurrencyAmountAndSymbol"/>
-        <!--TextChanged="NumberTextBox_TextChanged"/-->
-        <!--TextChanged="ValueText_TextChanged_1"/-->
-        <!--PreviewTextInput="TextCompositionEventHandler"/-->
-        <!--i:Interaction.Behaviors>
-                <Behaviors:TextBoxInputBehavior InputMode="DecimalInput" JustPositivDecimalInput="false"/>
-            </>
-        </TextBox-->
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Value" VerticalAlignment="Top" Margin="20,19,0,0" Height="34" Width="116" FontSize="20"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" Margin="175,19,0,0" Height="34" Width="116" FontSize="20"/>
         <TextBox x:Name="CommentText" HorizontalAlignment="Left" Margin="20,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="80" Width="232" FontSize="24" FontFamily="Global User Interface"/>
@@ -48,17 +41,6 @@
         <TextBox x:Name="OdometerText" HorizontalAlignment="Left" Margin="195,321,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="80" Width="144" FontSize="36"
         	InputScope="Number"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Odometer" VerticalAlignment="Top" Margin="195,287,0,0" Height="34" Width="116" FontSize="20"/>
-        <!--Button x:Name="signInBtn"  
-            Click="SignIn"  
-            Content="Sign in" 
-            Margin="258,264,0,319"/>
-        <TextBlock Height="32" 
-            Foreground="White" 
-            HorizontalAlignment="Left" 
-            Margin="10,356,0,0" 
-            Name="infoTextBlock" 
-            VerticalAlignment="Top" 
-            Width="380" /-->
     </Grid>
 </Page>
 <!--Page
