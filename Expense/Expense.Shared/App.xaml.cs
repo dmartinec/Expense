@@ -20,7 +20,7 @@ namespace Expense
         public App()
         {
             InitializeComponent();
-            this.Suspending += this.OnSuspending;
+            Suspending += OnSuspending;
         }
 
         /// <summary>
